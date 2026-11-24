@@ -12,3 +12,4 @@ async function request(ruta) {
 
 export const getProductos = () => request("/productos/");
 export const getCategorias = () => request("/categorias/");
+export const getRecomendados = (id) => request(`/productos/${id}/recomendados/`);

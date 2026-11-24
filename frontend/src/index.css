@@ -131,3 +131,7 @@
 @theme {
   --font-titulo: "Playfair Display", serif;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}

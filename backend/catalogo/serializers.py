@@ -13,7 +13,13 @@ class ProductoSerializer(serializers.ModelSerializer):
     precio = serializers.DecimalField(
         max_digits=8, decimal_places=2, coerce_to_string=False
     )
+    precio_final = serializers.DecimalField(
+        max_digits=8, decimal_places=2, coerce_to_string=False, read_only=True
+    )
 
     class Meta:
         model = Producto
-        fields = ["id", "nombre", "descripcion", "precio", "imagen", "stock", "categoria"]
+        fields = [
+            "id", "nombre", "descripcion", "precio", "descuento", "precio_final",
+            "imagen", "stock", "estado_stock", "categoria",
+        ]
